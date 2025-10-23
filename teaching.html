@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teaching – Irene Strauss</title>
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#faf9ff;
+      --ink:#1e1c2f;        /* main text */
+      --ink-soft:#6a6680;   /* metadata/subtext */
+      --brand:#5a3cc6;      /* accent purple */
+      --brand-hover:#4730a3;
+      --brand-soft:#5a4a91;
+      --border:#eae6fb;
+      --surface:rgba(248,246,255,0.9);
+    }
+
+    html,body{margin:0;padding:0}
+    body{
+      background:var(--bg);
+      color:var(--ink);
+      font-family:'Inter',sans-serif;
+      text-align:center;
+      padding:0.5rem 1.5rem;
+    }
+
+    /* Header */
+    .site-header{
+      position: sticky; top: 0; z-index: 100;
+      background: var(--surface);
+      backdrop-filter: saturate(140%) blur(6px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-wrap{
+      max-width:980px; margin:0 auto;
+      display:flex; align-items:center; justify-content:center;
+      padding:0.6rem 0.4rem; gap:1rem;
+    }
+    .nav-links{ display:flex; gap:0.8rem; align-items:center; }
+    .nav-links a{
+      display:inline-block; padding:0.35rem 0.7rem; border-radius:0.7rem;
+      text-decoration:none; color:var(--ink);
+      font-weight:500; font-size:0.8rem;
+    }
+    .nav-links a:hover{
+      color:var(--brand);
+      background:#f0ebff;
+    }
+    .nav-links a[aria-current="page"]{
+      color:var(--brand);
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    #nav-toggle{ display:none; }
+    .hamburger{ display:none; cursor:pointer; user-select:none;
+      padding:0.4rem 0.5rem; border-radius:0.6rem; border:1px solid var(--border);
+    }
+    .hamburger span{ display:block; width:22px; height:2px; margin:4px 0; background:#6e62a8; }
+
+    @media (max-width: 720px){
+      .nav-links{ display:none; flex-direction:column; padding:0.6rem 0; }
+      .hamburger{ display:block; }
+      #nav-toggle:checked ~ .nav-links{ display:flex; }
+    }
+
+    /* Content */
+    .container{ max-width:700px; margin:0 auto; text-align:left; }
+
+    h1{
+      font-size:1.2rem;
+      color:var(--brand-soft);
+      margin:1.4rem 0 1rem;
+      text-align:left;
+      font-weight:600;
+    }
+
+    .entry{
+      margin-bottom:0.9rem;
+      border-bottom:1px solid var(--border);
+      padding-bottom:0.6rem;
+    }
+
+    .row{
+      display:flex;
+      justify-content:space-between;
+      align-items:baseline;
+      flex-wrap:wrap;
+      gap:0.6rem;
+    }
+
+    .title a{
+      color:var(--brand-soft);
+      text-decoration:none;
+      font-weight:500; /* softer weight */
+      font-size:0.95rem;
+    }
+    .title a:hover{
+      color:var(--brand-hover);
+      text-decoration:underline;
+      text-underline-offset:2px;
+    }
+
+    .title{
+      color:var(--brand-soft);
+      font-weight:500;
+      font-size:0.95rem;
+    }
+
+    .meta{
+      font-size:0.78rem;
+      color:var(--ink-soft);
+    }
+
+    .subtitle{
+      font-size:0.83rem;
+      color:var(--ink-soft);
+      font-style:italic;
+      margin-top:0.25rem;
+    }
+
+    .info{
+      font-size:0.83rem;
+      color:var(--ink);
+      margin-top:0.35rem;
+      line-height:1.4;
+    }
+
+    @media (max-width:600px){
+      .row{ flex-direction:column; align-items:flex-start; }
+      .meta{ margin-top:0.15rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <label class="hamburger" for="nav-toggle" aria-label="Toggle menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </label>
+      <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#about">About</a>
+        <a href="https://scholar.google.com/" target="_blank" rel="noopener">Publications</a>
+        <a href="teaching.html" aria-current="page">Teaching</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1></h1>
+
+    <div class="entry">
+      <div class="row">
+        <div class="title">
+          <a href="https://rycolab.io/classes/intro-nlp-f25/" target="_blank" rel="noopener">
+            Natural Language Processing
+          </a>
+        </div>
+        <div class="meta">ETH Zurich · Fall 2025</div>
+      </div>
+      <div class="subtitle">Teaching Assistant, graduate</div>
+    </div>
+
+    <div class="entry">
+      <div class="row">
+        <div class="title">
+          <a href="https://rycolab.io/classes/llm-s25/" target="_blank" rel="noopener">
+            Large Language Models
+          </a>
+        </div>
+        <div class="meta">ETH Zurich · Spring 2025</div>
+      </div>
+      <div class="subtitle">Teaching Assistant, graduate</div>
+    </div>
+
+    <div class="entry">
+      <div class="row">
+        <div class="title">
+          <a href="https://ml2.inf.ethz.ch/courses/aml/" target="_blank" rel="noopener">
+            Advanced Machine Learning
+          </a>
+        </div>
+        <div class="meta">ETH Zurich · Fall 2024</div>
+      </div>
+      <div class="subtitle">Teaching Assistant, graduate</div>
+      <div class="info">Authored the official lecture notes.</div>
+    </div>
+
+    <div class="entry">
+      <div class="row">
+        <div class="title">
+          <a href="https://www.tugraz.at/en/sites/comaed/about" target="_blank" rel="noopener">
+            CAD and Game Engineering
+          </a>
+        </div>
+        <div class="meta">TU Graz · Summer 2022</div>
+      </div>
+      <div class="subtitle">Course Leader, Summer Schools</div>
+      <div class="info">Organized and led workshops on 3D modeling and game development for high-school girls.</div>
+    </div>
+
+    <div class="entry">
+      <div class="row">
+        <div class="title">
+    <a href="https://www.isec.tugraz.at/teaching/materials/scs/slides/" target="_blank" rel="noopener">
+            Side Channel Attacks
+            </a>
+        </div>
+        <div class="meta">TU Graz · Spring 2022</div>
+      </div>
+      <div class="subtitle">Collaboration on an educational video series with Prof. Daniel Gruss</div>
+    </div>
+
+    <div class="entry">
+      <div class="row">
+        <div class="title">Computer Graphics</div>
+        <div class="meta">TU Graz · Spring 2022</div>
+      </div>
+      <div class="subtitle">Teaching Assistant, undergraduate</div>
+    </div>
+
+  </main>
+
+</body>
+</html>
+
