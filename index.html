@@ -105,7 +105,36 @@
       .top img { align-self:center; margin:0.5rem 0 0 0; }
       p { text-align:justify; padding-left:0.3rem; padding-right:0.3rem; }
     }
+
+    .social {
+  margin-top: 0.4rem;
+}
+
+.social a {
+  color: var(--ink-soft);
+  margin: 0 0.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.social a:hover {
+  color: var(--brand);
+}
+
+.social i {
+  font-size: 13px;  /* smaller, elegant size */
+  opacity: 0.9;
+  transition: transform 0.2s ease;
+}
+
+.social a:hover i {
+  transform: scale(1.1); /* subtle hover lift */
+}
   </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
 
@@ -132,6 +161,18 @@
       <div class="identity">
         <h1>Irene Strauss</h1>
         <h2>Computer Scientist</h2>
+        <div class="identity">
+<div class="social">
+  <a href="mailto:iry.strauss@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+  <a href="https://www.linkedin.com/in/irenestrauss" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://scholar.google.com/citations?user=xtnOjrcAAAAJ&hl=de&oi=ao" target="_blank" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+  <a href="https://github.com/irenestrauss" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+
+  <a href="https://twitter.com/irenestrauss" target="_blank" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+</div>
+
+
+</div>
       </div>
     </div>
 
@@ -156,11 +197,6 @@
       (Always happy to swap hiking routes or book recommendations!)
     </p>
 
-    <div class="links">
-      <a href="mailto:iry.strauss@gmail.com">Email</a>
-      <a href="https://github.com/irenestrauss" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/irenestrauss" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
   </section>
 
 </body>
