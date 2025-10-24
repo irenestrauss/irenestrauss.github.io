@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riddles – Irene Strauss</title>
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#faf9ff;
+      --ink:#1e1c2f;
+      --ink-soft:#6a6680;
+      --brand:#5a3cc6;
+      --brand-hover:#4730a3;
+      --border:#eae6fb;
+      --surface:rgba(248,246,255,0.9);
+      --ring:#d9cff8;
+      --card:#ffffff;
+    }
+
+    html,body{margin:0;padding:0}
+    *{box-sizing:border-box;}
+    body{
+      background:var(--bg);
+      color:var(--ink);
+      font-family:'Inter',sans-serif;
+      padding:0.5rem 1.5rem;
+    }
+
+    .site-header{
+      position: sticky; top: 0; z-index: 100;
+      background: var(--surface);
+      backdrop-filter: saturate(140%) blur(6px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-wrap{
+      max-width:980px; margin:0 auto;
+      display:flex; align-items:center; justify-content:center;
+      padding:0.6rem 0.4rem; gap:1rem;
+    }
+    .nav-links{ display:flex; gap:0.8rem; align-items:center; }
+    .nav-links a{
+      display:inline-block; padding:0.35rem 0.7rem; border-radius:0.7rem;
+      text-decoration:none; color:var(--ink);
+      font-weight:500; font-size:0.8rem;
+    }
+    .nav-links a:hover{ color:var(--brand); background:#f0ebff; }
+    .nav-links a[aria-current="page"]{
+      color:var(--brand);
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    main{ max-width:940px; margin:1.4rem auto; }
+
+    .back{ display:inline-block; font-size:0.85rem; color:var(--ink-soft); margin-bottom:1rem; text-decoration:none; }
+    .back:hover{ text-decoration:underline; color:var(--brand); }
+
+    h1{ text-align:center; font-size:1.5rem; color:#5e4b8b; margin:0.3rem 0 0.6rem; }
+    .intro{ max-width:720px; margin:0 auto 0.8rem; color:var(--ink-soft); font-size:0.9rem; text-align:center; }
+
+    /* Masonry layout restored */
+    .grid {
+      column-count: 2;
+      column-gap: 0.75rem;
+      column-fill: balance;
+    }
+    @media (max-width: 720px){ .grid{ column-count:1; } }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.04);
+      padding:0.7rem 0.85rem;
+      display:inline-block;
+      width:100%;
+      margin-bottom:0.75rem;
+      break-inside: avoid-column;
+      -webkit-column-break-inside: avoid;
+      -moz-column-break-inside: avoid;
+      column-break-inside: avoid;
+      page-break-inside: avoid;
+      transition: box-shadow .15s ease, border-color .15s ease;
+    }
+    .card:hover{ box-shadow: 0 14px 30px rgba(0,0,0,.06); border-color:#e1dcfb; }
+
+    .card h3{ margin:0; font-size:0.95rem; color:var(--ink); font-weight:500; line-height:1.2; }
+    .q{ 
+      font-size:0.9rem; 
+      line-height:1.5; 
+      margin:0; 
+      text-align: justify; 
+    }    .q{ font-size:0.9rem; line-height:1.5; margin:0; }
+
+    .row{ display:flex; align-items:center; justify-content:space-between; gap:0.4rem; margin-bottom:0.45rem; }
+    .tag{ font-size:0.68rem; padding:0.08rem 0.45rem; border:1px solid var(--border); border-radius:999px; color:#5a4a91; background:#f0ebff; }
+.note {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  margin-top: 2rem;
+  line-height: 1.5;
+  text-align: left;
+  font-style: italic;
+}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="nav-wrap">
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#about">About</a>
+      <a href="https://scholar.google.com/citations?user=xtnOjrcAAAAJ&hl=de&oi=ao" target="_blank" rel="noopener">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="random.html">Random</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <a href="random.html" class="back">← Back to Random</a>
+  <h1>Puzzles</h1>
+  <p class="note">Thanks to Gergely Kulcsár, Zsombor Hajdú, Marko Milenkovic and Samuel Kiegeland for always keeping me busy with cute riddles. Here are some of my favorites. The solution if left as an exercise to the reader :D (I am sure you can find them somewhere online or consult your favorite chatbot.)</p>
+
+  <div class="grid">
+
+    <article class="card">
+      <div class="row">
+        <h3>Twelve Spheres</h3>
+        <span class="tag">logic</span>
+      </div>
+      <p class="q">You have 12 visually identical spheres. Exactly one is defective and is either heavier or lighter (you don't know which). Using a balance scale with no additional weights, determine which sphere is defective and whether it is heavier or lighter. What is the minimum number of weighings you need?</p>
+    </article>
+
+    <article class="card">
+      <div class="row">
+        <h3>Noether &amp; Lovelace in Hell</h3>
+        <span class="tag">numbers</span>
+      </div>
+      <p class="q">The famous mathematicians Emmy Noether and Ada Lovelace find themselves in Hell. Lucifer promises them freedom if they can guess two integers between 1 and 100 (i.e., from {2,3,…,99}) that he has chosen. He tells Noether the <em>product</em> and Lovelace the <em>sum</em> of the numbers. The following dialogue ensues:<br><br>
+      Noether: <em>I don't know the two numbers.</em><br>
+      Lovelace: <em>I knew you didn't.</em><br>
+      Noether: <em>Now I know the two numbers.</em><br>
+      Lovelace: <em>Then I know them too.</em><br><br>
+      Determine the two numbers based on this conversation.</p>
+    </article>
+        <article class="card">
+      <div class="row">
+        <h3>24 Challenge</h3>
+        <span class="tag">numbers</span>
+      </div>
+      <p class="q">Using the numbers 6, 3, 1, and 4, and only the basic arithmetic operations +, −, ×, and ÷, form an expression that equals 24. You must use each of the four numbers exactly once.</p>
+    </article>
+
+    <article class="card">
+      <div class="row">
+        <h3>Touch without Touching</h3>
+        <span class="tag">logic</span>
+      </div>
+      <p class="q">Two scientists, A and B, must each take samples from two probes, C and D.
+Both the scientists' hands and the probes are contaminated with different substances, and no contamination should spread between them.
+You have only two gloves available.
+How can both scientists safely take samples from both probes without any cross-contamination?
+       </p>
+    </article>
+
+    <article class="card">
+      <div class="row">
+        <h3>Hilbert Hotel Inspection</h3>
+        <span class="tag">infinity</span>
+      </div>
+      <p class="q">You have just been promoted to Chief Quality Inspector at the Hilbert Hotel! Two new hotels are under construction: one shaped like an infinite binary tree, and one laid out like the interval [0,1]. Unfortunately, only one of them will be asbestos-free. You can choose exactly one hotel to inspect before opening, which will ensure that it remains empty and safe from contamination. The uninspected hotel, however, will fill up completely and might need to be evacuated later once every room is occupied. Which hotel do you inspect, and how do you organize the evacuation?</p>
+    </article>
+
+    <article class="card">
+      <div class="row">
+        <h3>Square Jumps</h3>
+        <span class="tag">geometry</span>
+      </div>
+      <p class="q">4 points are placed at the corners of a square. You can "jump" any point over any other point; i.e., move the first point towards the second point by twice their original distance. With any sequence of these jumps, can you make a larger square? </p>
+          <p style="font-size:0.75rem; color:var(--ink-soft); margin-top:0.4rem;">Source: <a href="https://x.com/IsaacKing314/status/1976467467175387383" target="_blank" rel="noopener">@IsaacKing314</a></p>
+    </article>
+
+  </div>
+
+</main>
+</body>
+</html>

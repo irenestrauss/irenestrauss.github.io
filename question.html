@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Questions – Irene Strauss</title>
+  <link rel="icon" href="/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#faf9ff;
+      --ink:#1e1c2f;
+      --ink-soft:#6a6680;
+      --brand:#5a3cc6;
+      --brand-hover:#4730a3;
+      --border:#eae6fb;
+      --surface:rgba(248,246,255,0.9);
+      --ring:#d9cff8;
+    }
+
+    html,body{margin:0;padding:0}
+    body{
+      background:var(--bg);
+      color:var(--ink);
+      font-family:'Inter',sans-serif;
+      padding:0.5rem 1.5rem;
+    }
+
+    /* Header */
+    .site-header{
+      position: sticky; top: 0; z-index: 100;
+      background: var(--surface);
+      backdrop-filter: saturate(140%) blur(6px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-wrap{
+      max-width:980px; margin:0 auto;
+      display:flex; align-items:center; justify-content:center;
+      padding:0.6rem 0.4rem; gap:1rem;
+    }
+    .nav-links{ display:flex; gap:0.8rem; align-items:center; }
+    .nav-links a{
+      display:inline-block; padding:0.35rem 0.7rem; border-radius:0.7rem;
+      text-decoration:none; color:var(--ink);
+      font-weight:500; font-size:0.8rem;
+    }
+    .nav-links a:hover{ color:var(--brand); background:#f0ebff; }
+    .nav-links a[aria-current="page"]{
+      color:var(--brand);
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    main{
+      max-width:720px;
+      margin:2rem auto;
+      text-align:left;
+    }
+
+    a{
+      color:var(--brand);
+      text-decoration:none;
+      font-weight:500;
+    }
+    a:hover{ text-decoration:underline; }
+
+    .back{
+      display:inline-block;
+      font-size:0.85rem;
+      color:var(--ink-soft);
+      margin-bottom:1rem;
+    }
+
+    h1{
+      font-size:1.6rem;
+      color:#5e4b8b;
+      margin:0.5rem 0 1.2rem;
+      text-align:center;
+    }
+
+    section{
+      margin-bottom:1.6rem;
+      padding-left:0.9rem;
+    }
+
+h2 {
+
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  font-weight: 500;
+  margin: 1.2rem 0 0.4rem;
+}
+    .sub{
+      font-size:0.85rem;
+      color:var(--ink-soft);
+      margin-bottom:0.4rem;
+    }
+
+ul {
+  list-style: none;
+  padding-left: 1rem;
+  line-height: 1.55;
+}
+
+li {
+  margin: 0.35rem 0;
+  font-size: 0.92rem;
+  position: relative;
+}
+
+li::before {
+  content: "•";
+  color: var(--brand);
+  position: absolute;
+  left: -0.9rem;
+  top: 0.1rem;  /* lowers the bullet slightly */
+  font-size: 0.75rem; /* smaller, elegant dot */
+  opacity: 0.75;
+}
+.note {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  margin-top: 2rem;
+  line-height: 1.5;
+  text-align: left;
+  font-style: italic;
+}
+
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#about">About</a>
+      <a href="https://scholar.google.com/citations?user=xtnOjrcAAAAJ&hl=de&oi=ao" target="_blank" rel="noopener">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="random.html">Random</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <a href="random.html" class="back">← Back to Random</a>
+<p class="note">
+  I am aware that these questions are very open; that's exactly the point.  
+  They are meant to invite reflection beyond a clear scientific framework.  
+  I love discussing them, so feel free to reach out by email.  
+  Please do not copy large parts of this page without linking back to me.
+</p>
+
+  <section>
+    <h2>Thinking and Perception</h2>
+    <ul>
+      <li>What shape are your thoughts?</li>
+      <li>Can thoughts be measured or quantified?</li>
+      <li>What would half a thought be?</li>
+      <li>Can we learn to think without putting everything into boxes?</li>
+      <li>How do you recognize people?</li>
+      <li>To what extent do you believe your opinions are more "right" than others'?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Language</h2>
+    <ul>
+      <li>What is your favorite word in your native language, and do its translations make you feel the same way?</li>
+      <li>Why did German avoid triple consonants before the 1996 spelling reform?</li>
+      <li>What is your favorite Latin poem?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>AI and Philosophy</h2>
+    <ul>
+      <li>Can large language models be sentient?</li>
+      <li>How does this relate to the mind–matter problem — and what's your view on it?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Questions on Questions</h2>
+    <ul>
+      <li>What is the definition of a question?</li>
+      <li>What makes a good question?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Things we take for granted</h2>
+    <ul>
+      <li>What is truth?</li>
+      <li>Is the sky really blue?</li>
+      <li>Do you like the concept of "favorite things"?</li>
+      <li>What are today's religions — or their modern replacements?</li>
+      <li>Does everyone have to believe in something?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Questions true mathematicians will answer in a heartbeat</h2>
+    <ul>
+      <li>What is your favorite prime number?</li>
+      <li>What is your favorite shape?</li>
+    </ul>
+  </section>
+</main>
+
+</body>
+</html>
