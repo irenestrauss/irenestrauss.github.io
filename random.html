@@ -17,13 +17,16 @@
       --surface:rgba(248,246,255,0.9);
       --ring:#d9cff8;
     }
+    html, body {
+  margin: 0; padding: 0;
+}
 
-    body {
-      background:var(--bg);
-      color:var(--ink);
-      font-family:'Inter',sans-serif;
-      padding:0.5rem 1.5rem;
-      text-align:center;
+    body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    padding:0.5rem 1.5rem;    /* same as index */
+    text-align:center;        /* <- add this to match index */
     }
 
     /* Header styling same as other pages */
@@ -73,10 +76,7 @@
       font-weight:500;
     }
     a:hover { text-decoration:underline; }
-    html, body {
-  margin: 0;
-  padding: 0;
-}
+
   </style>
 </head>
 <body>
