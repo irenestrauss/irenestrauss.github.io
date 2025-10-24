@@ -7,9 +7,9 @@
   <title>Irene – Computer Scientist</title>
   <link rel="icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root{
-      /* Same palette & header styling as Teaching page */
       --bg:#faf9ff;
       --ink:#1e1c2f;        /* main text */
       --ink-soft:#6a6680;   /* metadata/subtext */
@@ -29,82 +29,35 @@
       padding:0.5rem 1.5rem;
     }
 
-/* Header / Nav */
-.site-header{
-  position: sticky; top: 0; z-index: 100;
-  background: var(--surface);
-  backdrop-filter: saturate(140%) blur(6px);
-  border-bottom: 1px solid var(--border);
-}
-.nav-wrap{
-  max-width:980px; margin:0 auto;
-  display:flex; align-items:center; justify-content:center;
-  padding:0.6rem 0.4rem; gap:1rem;
-  position: relative; /* so the mobile panel can anchor */
-}
-.nav-links{ display:flex; gap:0.8rem; align-items:center; }
-.nav-links a{
-  display:inline-block; padding:0.35rem 0.7rem; border-radius:0.7rem;
-  text-decoration:none; color:var(--ink);
-  font-weight:500; font-size:0.8rem;
-  outline:none;
-}
-.nav-links a:hover{
-  color:var(--brand);
-  background:#f0ebff;
-}
-.nav-links a[aria-current="page"]{
-  color:var(--brand);
-  text-decoration:underline;
-  text-underline-offset:3px;
-}
-.nav-links a:focus-visible{ box-shadow:0 0 0 3px var(--ring); }
+    /* Header / Nav — identical to Random page */
+    .site-header{
+      position: sticky; top: 0; z-index: 100;
+      background: var(--surface);
+      backdrop-filter: saturate(140%) blur(6px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-wrap{
+      max-width:980px; margin:0 auto;
+      display:flex; align-items:center; justify-content:center;
+      padding:0.6rem 0.4rem; gap:1rem;
+    }
+    .nav-links{ display:flex; gap:0.8rem; align-items:center; }
+    .nav-links a{
+      display:inline-block; padding:0.35rem 0.7rem; border-radius:0.7rem;
+      text-decoration:none; color:var(--ink);
+      font-weight:500; font-size:0.8rem;
+    }
+    .nav-links a:hover{
+      color:var(--brand);
+      background:#f0ebff;
+    }
+    .nav-links a[aria-current="page"]{
+      color:var(--brand);
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
 
-/* Mobile */
-#nav-toggle{ display:none; }
-.hamburger{
-  display:none;
-  cursor:pointer; user-select:none;
-  width:40px; height:36px;
-  border-radius:0.6rem; border:1px solid var(--border);
-  background:white;
-  position:relative;
-}
-.hamburger span{
-  position:absolute; left:9px; right:9px; height:2px; background:#6e62a8;
-  transition:transform .2s ease, opacity .2s ease, top .2s ease;
-}
-.hamburger span:nth-child(1){ top:11px; }
-.hamburger span:nth-child(2){ top:17px; }
-.hamburger span:nth-child(3){ top:23px; }
-
-/* When open, morph to an "X" */
-#nav-toggle:checked + label.hamburger span:nth-child(2){ opacity:0; }
-#nav-toggle:checked + label.hamburger span:nth-child(1){ transform: translateY(6px) rotate(45deg); }
-#nav-toggle:checked + label.hamburger span:nth-child(3){ transform: translateY(-6px) rotate(-45deg); }
-
-/* Mobile dropdown panel */
-@media (max-width: 720px){
-  .nav-wrap{ justify-content:space-between; padding:0.5rem 1rem; }
-  .hamburger{ display:inline-block; }
-  .nav-links{
-    display:none;
-    position:absolute; left:0; right:0; top:100%;
-    background: var(--surface);
-    border-bottom:1px solid var(--border);
-    box-shadow: 0 10px 24px rgba(0,0,0,.06);
-    padding:0.4rem;
-    gap:0;
-  }
-  #nav-toggle:checked ~ .nav-links{
-    display:flex; flex-direction:column; align-items:stretch;
-  }
-  .nav-links a{
-    padding:0.8rem 0.8rem; font-size:0.95rem; border-radius:0.6rem;
-  }
-}
-
-    /* Page-specific styles (kept from your original, aligned to palette) */
+    /* Page-specific styles */
     .top {
       display:flex; align-items:center; justify-content:center;
       gap:2rem; margin:2rem 0;
@@ -112,7 +65,7 @@
     .top img {
       width:140px; height:140px; border-radius:50%; border:3px solid var(--ring);
     }
-    .identity h1 { font-size:1.8rem; margin:0; color:#5e4b8b; } /* subtle secondary tone */
+    .identity h1 { font-size:1.8rem; margin:0; color:#5e4b8b; }
     .identity h2 { font-size:1rem; font-weight:400; margin:0.3rem 0 0; color:var(--ink-soft); }
 
     h1 { font-size:1.8rem; color:#5e4b8b; margin-bottom:0.5rem; }
@@ -135,54 +88,37 @@
       p { text-align:justify; padding-left:0.3rem; padding-right:0.3rem; }
     }
 
-    .social {
-  margin-top: 0.4rem;
-}
-
-.social a {
-  color: var(--ink-soft);
-  margin: 0 0.3rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.2s ease;
-}
-
-.social a:hover {
-  color: var(--brand);
-}
-
-.social i {
-  font-size: 13px;  /* smaller, elegant size */
-  opacity: 0.9;
-  transition: transform 0.2s ease;
-}
-
-.social a:hover i {
-  transform: scale(1.1); /* subtle hover lift */
-}
+    .social { margin-top: 0.4rem; }
+    .social a {
+      color: var(--ink-soft);
+      margin: 0 0.3rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s ease;
+    }
+    .social a:hover { color: var(--brand); }
+    .social i {
+      font-size: 13px;
+      opacity: 0.9;
+      transition: transform 0.2s ease;
+    }
+    .social a:hover i { transform: scale(1.1); }
   </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 <body>
 
   <!-- Sticky Header -->
-<header class="site-header">
-  <div class="nav-wrap">
-    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
-    <label class="hamburger" for="nav-toggle" aria-label="Toggle menu" role="button" tabindex="0">
-      <span></span><span></span><span></span>
-    </label>
-
-        <nav class="nav-links" aria-label="Primary">
-<a href="index.html#about">About</a>
-<a href="https://scholar.google.com/citations?user=xtnOjrcAAAAJ&hl=de&oi=ao" target="_blank" rel="noopener">Publications</a>
-<a href="teaching.html" aria-current="page">Teaching</a>
-<a href="random.html">Random</a>
-</nav>
-  </div>
-</header>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#about" aria-current="page">About</a>
+        <a href="https://scholar.google.com/citations?user=xtnOjrcAAAAJ&hl=de&oi=ao" target="_blank" rel="noopener">Publications</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="random.html">Random</a>
+      </nav>
+    </div>
+  </header>
 
   <!-- About -->
   <section id="about">
@@ -192,17 +128,14 @@
         <h1>Irene Strauss</h1>
         <h2>Computer Scientist</h2>
         <div class="identity">
-<div class="social">
-  <a href="mailto:iry.strauss@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-  <a href="https://www.linkedin.com/in/irenestrauss" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-    <a href="https://scholar.google.com/citations?user=xtnOjrcAAAAJ&hl=de&oi=ao" target="_blank" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-  <a href="https://github.com/irenestrauss" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-
-  <a href="https://x.com/strauss_irene" target="_blank" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
-</div>
-
-
-</div>
+          <div class="social">
+            <a href="mailto:iry.strauss@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/irenestrauss" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://scholar.google.com/citations?user=xtnOjrcAAAAJ&hl=de&oi=ao" target="_blank" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+            <a href="https://github.com/irenestrauss" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://x.com/strauss_irene" target="_blank" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
       </div>
     </div>
 
