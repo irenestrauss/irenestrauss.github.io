@@ -23,7 +23,7 @@
       background:var(--bg);
       color:var(--ink);
       font-family:'Inter',sans-serif;
-      padding:0.5rem 1.5rem;   /* same as Random */
+      padding:0.5rem 1.5rem;
       text-align:center;
     }
 
@@ -51,21 +51,11 @@
       text-underline-offset:3px;
     }
 
-    /* >>> MATCH Random page content width <<< */
-    main {
-      max-width:720px;    /* exactly like Random */
-      margin:2rem auto;
-      text-align:left;
+    main { 
+      max-width:860px;       
+      margin:2rem auto; 
+      text-align:left; 
     }
-
-    /* spacer under the header (empty line) */
-    .after-header-spacer {
-  height: 0.8rem;
-}
-
-.lw-card {
-  min-height: 100px; /* shorter box */
-}
 
     h1 {
       text-align:center;
@@ -74,70 +64,71 @@
       margin-bottom:0.8rem;
     }
 
-    .embed-section { margin: 2rem 0; }
+    p { font-size:0.95rem; line-height:1.55; color:var(--ink); margin:1rem 0; }
+    a { color:var(--brand); text-decoration:none; font-weight:500; }
+    a:hover { text-decoration:underline; }
 
-    /* Tighter side-by-side layout (even closer) */
+    .embed-section { margin: 2rem 0; }
     .card-grid {
       display:grid;
       grid-template-columns: 1fr 1fr;
-      gap:0.25rem;          /* closer */
-      align-items:start;
+      gap:1.2rem;
       justify-items:center;
+      align-items:start;
     }
     @media (max-width: 750px){
-      .card-grid { grid-template-columns:1fr; gap:1rem; }
+      .card-grid { grid-template-columns:1fr; }
     }
 
-    /* ---- LessWrong card (smaller, shifted down, longer box) ---- */
+    /* LessWrong card styled to resemble Substack's clean box, smaller fonts */
     .lw-card {
-      width:84%;                 /* slightly narrower */
-      border:1px solid var(--border);
-      border-radius:1rem;
-      background:white;
-      box-shadow:0 1px 4px rgba(0,0,0,0.03);
-      padding:0.6rem 0.8rem;     /* compact padding */
-      text-align:left;
-      margin-top:0.5rem;         /* shift down a bit */
-      min-height:350px;          /* make it longer */
-      display:flex; flex-direction:column;
-      font-family: Georgia, "Times New Roman", Times, serif; /* mimic Substack font */
+      width: 90%;
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      padding: 0.9rem 1rem;
+      text-align: left;
     }
     .lw-card img {
-      width:100%;
-      border-radius:0.5rem;
-      margin-bottom:0.5rem;
+      width: 100%;
+      height: auto;
+      border-radius: 0.6rem;
+      margin-bottom: 0.6rem;
       display:block;
     }
-    .lw-card .source { font-size:0.68rem; text-transform:uppercase; color:var(--ink-soft); margin:0 0 0.25rem; }
-    .lw-card h3 { font-size:0.95rem; margin:0.15rem 0 0.35rem; line-height:1.26; font-weight:600; }
-    .lw-card .desc { font-size:0.85rem; color:var(--ink-soft); margin:0 0 0.9rem; }
+    .lw-card .source {
+      font-size: 0.7rem; /* scaled down */
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin: 0 0 0.25rem 0;
+    }
+    .lw-card h3 {
+      margin: 0.2rem 0 0.4rem;
+      font-size: 0.95rem; /* scaled down */
+      line-height: 1.25;
+    }
+    .lw-card .desc {
+      font-size: 0.85rem; /* scaled down */
+      color: var(--ink-soft);
+      margin: 0;
+    }
 
-    /* Violet CTA button */
-.lw-cta {
-  display:inline-block;
-  align-self:center;          /* ← centers the box */
-  padding:0.45rem 0.7rem;
-  border-radius:0.55rem;
-  background:var(--brand);
-  color:white;
-  text-decoration:none;
-  font-size:0.85rem;
-  font-weight:600;
-  border:1px solid var(--brand);
-  transition:background 0.15s ease, transform 0.05s ease;
-}
-    .lw-cta:hover { background:var(--brand-hover); transform:translateY(-1px); }
-
-    /* ---- Substack embed: NO extra box; scaled; align to top ---- */
+    /* Substack: no extra box around it; just a shell for scaling */
     .substack-shell {
-      width:84%;                /* slightly narrower to come closer */
-      background:transparent; border:none; box-shadow:none;
-      display:flex; justify-content:center; align-items:flex-start;
+      width: 90%;
+      /* transparent shell, no border/background/shadow */
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
     }
     .substack-post-embed {
-      transform:scale(0.78);    /* a touch smaller */
-      transform-origin:top center;
-      width:100%;
+      transform: scale(0.80); /* scale entire widget down */
+      transform-origin: top center;
+      width: 100%;
     }
   </style>
 </head>
@@ -148,31 +139,27 @@
       <a href="index.html#about">About</a>
       <a href="https://scholar.google.com/citations?user=xtnOjrcAAAAJ&hl=de&oi=ao" target="_blank" rel="noopener">Publications</a>
       <a href="teaching.html">Teaching</a>
+      <a href="random.html">Random</a>
       <a href="blog.html" aria-current="page">Blog</a>
-            <a href="random.html">Random</a>
-
     </nav>
   </div>
 </header>
-<div class="after-header-spacer" aria-hidden="true"></div>
 
 <main>
+  <h1>Blog</h1>
 
   <section class="embed-section" id="external-posts">
     <div class="card-grid">
 
-      <!-- LessWrong (left, smaller + longer + Substack-like font) -->
+      <!-- LessWrong (left) -->
       <div class="lw-card">
         <img src="dem.webp" alt="Testing the Authoritarian Bias of LLMs thumbnail">
         <p class="source">LessWrong</p>
         <h3><a href="https://www.lesswrong.com/posts/s6JntqWQrNj5Gygzx/testing-the-authoritarian-bias-of-llms" target="_blank" rel="noopener">Testing the Authoritarian Bias of LLMs</a></h3>
-        <br>
         <p class="desc">Models widely viewed as well-aligned (e.g., Claude) display measurable authoritarian leanings. When asked for role models, up to 50% of political figures mentioned are authoritarian—including controversial dictators like Muammar Gaddafi (Libya) or Nicolae Ceaușescu (Romania).</p>
-        <br>
-        <a class="lw-cta" href="https://www.lesswrong.com/posts/s6JntqWQrNj5Gygzx/testing-the-authoritarian-bias-of-llms" target="_blank" rel="noopener">Read on LessWrong</a>
       </div>
 
-      <!-- Substack (right, no box) -->
+      <!-- Substack (right) — NO extra box, just scaled down -->
       <div class="substack-shell">
         <div class="substack-post-embed">
           <p lang="en">What Is Your Favorite Word? by Irene Strauss</p>
