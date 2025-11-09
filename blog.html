@@ -130,6 +130,17 @@
       transform-origin: top center;
       width: 100%;
     }
+
+    @media (max-width: 750px) {
+  .lw-card,
+  .substack-shell {
+    width: 100%;        /* full width on mobile */
+  }
+
+  .card-grid {
+    gap: 1rem;          /* a bit more vertical space between them */
+  }
+}
   </style>
 </head>
 <body>
@@ -139,8 +150,9 @@
       <a href="index.html#about">About</a>
       <a href="https://scholar.google.com/citations?user=xtnOjrcAAAAJ&hl=de&oi=ao" target="_blank" rel="noopener">Publications</a>
       <a href="teaching.html">Teaching</a>
-      <a href="random.html">Random</a>
       <a href="blog.html" aria-current="page">Blog</a>
+      <a href="random.html">Random</a>
+
     </nav>
   </div>
 </header>
