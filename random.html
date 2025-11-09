@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog – Irene Strauss</title>
+  <title>Random – Irene Strauss</title>
   <link rel="icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    :root{
+    :root {
       --bg:#faf9ff;
       --ink:#1e1c2f;
       --ink-soft:#6a6680;
@@ -19,172 +19,106 @@
     }
     html, body { margin: 0; padding: 0; }
 
-    body{
-      background:var(--bg);
-      color:var(--ink);
-      font-family:'Inter',sans-serif;
-      padding:0.5rem 1.5rem;   /* same as Random */
-      text-align:center;
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+      padding: 0.5rem 1.5rem; /* same as index */
+      text-align: center;     /* match index */
     }
 
+    /* Header styling same as other pages */
     .site-header {
-      position: sticky; top: 0; z-index: 100;
+      position: sticky;
+      top: 0;
+      z-index: 100;
       background: var(--surface);
       backdrop-filter: saturate(140%) blur(6px);
       border-bottom: 1px solid var(--border);
     }
     .nav-wrap {
-      max-width:980px; margin:0 auto;
-      display:flex; align-items:center; justify-content:center;
-      padding:0.6rem 0.4rem; gap:1rem;
+      max-width: 980px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.6rem 0.4rem;
+      gap: 1rem;
     }
-    .nav-links { display:flex; gap:0.8rem; align-items:center; }
+    .nav-links {
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+    }
     .nav-links a {
-      display:inline-block; padding:0.35rem 0.7rem; border-radius:0.7rem;
-      text-decoration:none; color:var(--ink);
-      font-weight:500; font-size:0.8rem;
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      border-radius: 0.7rem;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 500;
+      font-size: 0.8rem;
     }
-    .nav-links a:hover { color:var(--brand); background:#f0ebff; }
+    .nav-links a:hover {
+      color: var(--brand);
+      background: #f0ebff;
+    }
     .nav-links a[aria-current="page"] {
-      color:var(--brand);
-      text-decoration:underline;
-      text-underline-offset:3px;
+      color: var(--brand);
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
-    /* >>> MATCH Random page content width <<< */
     main {
-      max-width:720px;    /* exactly like Random */
-      margin:2rem auto;
-      text-align:left;
+      max-width: 720px;
+      margin: 2rem auto;
+      text-align: left;
     }
-
-    /* spacer under the header (empty line) */
-    .after-header-spacer {
-  height: 0.8rem;
-}
-
-.lw-card {
-  min-height: 100px; /* shorter box */
-}
 
     h1 {
-      text-align:center;
-      color:#5e4b8b;
-      font-size:1.6rem;
-      margin-bottom:0.8rem;
+      text-align: center;
+      color: #5e4b8b;
+      font-size: 1.6rem;
+      margin-bottom: 0.8rem;
     }
 
-    .embed-section { margin: 2rem 0; }
-
-    /* Tighter side-by-side layout (even closer) */
-    .card-grid {
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:0.25rem;          /* closer */
-      align-items:start;
-      justify-items:center;
-    }
-    @media (max-width: 750px){
-      .card-grid { grid-template-columns:1fr; gap:1rem; }
+    p {
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: var(--ink);
+      margin: 1rem 0;
     }
 
-    /* ---- LessWrong card (smaller, shifted down, longer box) ---- */
-    .lw-card {
-      width:84%;                 /* slightly narrower */
-      border:1px solid var(--border);
-      border-radius:1rem;
-      background:white;
-      box-shadow:0 1px 4px rgba(0,0,0,0.03);
-      padding:0.6rem 0.8rem;     /* compact padding */
-      text-align:left;
-      margin-top:0.5rem;         /* shift down a bit */
-      min-height:350px;          /* make it longer */
-      display:flex; flex-direction:column;
-      font-family: Georgia, "Times New Roman", Times, serif; /* mimic Substack font */
+    a {
+      color: var(--brand);
+      text-decoration: none;
+      font-weight: 500;
     }
-    .lw-card img {
-      width:100%;
-      border-radius:0.5rem;
-      margin-bottom:0.5rem;
-      display:block;
-    }
-    .lw-card .source { font-size:0.68rem; text-transform:uppercase; color:var(--ink-soft); margin:0 0 0.25rem; }
-    .lw-card h3 { font-size:0.95rem; margin:0.15rem 0 0.35rem; line-height:1.26; font-weight:600; }
-    .lw-card .desc { font-size:0.85rem; color:var(--ink-soft); margin:0 0 0.9rem; }
-
-    /* Violet CTA button */
-.lw-cta {
-  display:inline-block;
-  align-self:center;          /* ← centers the box */
-  padding:0.45rem 0.7rem;
-  border-radius:0.55rem;
-  background:var(--brand);
-  color:white;
-  text-decoration:none;
-  font-size:0.85rem;
-  font-weight:600;
-  border:1px solid var(--brand);
-  transition:background 0.15s ease, transform 0.05s ease;
-}
-    .lw-cta:hover { background:var(--brand-hover); transform:translateY(-1px); }
-
-    /* ---- Substack embed: NO extra box; scaled; align to top ---- */
-    .substack-shell {
-      width:84%;                /* slightly narrower to come closer */
-      background:transparent; border:none; box-shadow:none;
-      display:flex; justify-content:center; align-items:flex-start;
-    }
-    .substack-post-embed {
-      transform:scale(0.78);    /* a touch smaller */
-      transform-origin:top center;
-      width:100%;
-    }
+    a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
+
 <header class="site-header">
   <div class="nav-wrap">
     <nav class="nav-links" aria-label="Primary">
       <a href="index.html#about">About</a>
       <a href="https://scholar.google.com/citations?user=xtnOjrcAAAAJ&hl=de&oi=ao" target="_blank" rel="noopener">Publications</a>
       <a href="teaching.html">Teaching</a>
-      <a href="blog.html" >Blog</a>
+      <a href="blog.html">Blog</a>
       <a href="random.html" aria-current="page">Random</a>
-
-
     </nav>
   </div>
 </header>
-<div class="after-header-spacer" aria-hidden="true"></div>
 
 <main>
-
-  <section class="embed-section" id="external-posts">
-    <div class="card-grid">
-
-      <!-- LessWrong (left, smaller + longer + Substack-like font) -->
-      <div class="lw-card">
-        <img src="dem.webp" alt="Testing the Authoritarian Bias of LLMs thumbnail">
-        <p class="source">LessWrong</p>
-        <h3><a href="https://www.lesswrong.com/posts/s6JntqWQrNj5Gygzx/testing-the-authoritarian-bias-of-llms" target="_blank" rel="noopener">Testing the Authoritarian Bias of LLMs</a></h3>
-        <br>
-        <p class="desc">Models widely viewed as well-aligned (e.g., Claude) display measurable authoritarian leanings. When asked for role models, up to 50% of political figures mentioned are authoritarian—including controversial dictators like Muammar Gaddafi (Libya) or Nicolae Ceaușescu (Romania).</p>
-        <br>
-        <a class="lw-cta" href="https://www.lesswrong.com/posts/s6JntqWQrNj5Gygzx/testing-the-authoritarian-bias-of-llms" target="_blank" rel="noopener">Read on LessWrong</a>
-      </div>
-
-      <!-- Substack (right, no box) -->
-      <div class="substack-shell">
-        <div class="substack-post-embed">
-          <p lang="en">What Is Your Favorite Word? by Irene Strauss</p>
-          <p>On human creativity and LLMs' uncreativity</p>
-          <a data-post-link href="https://irenestrauss.substack.com/p/what-is-your-favorite-word">Read on Substack</a>
-        </div>
-      </div>
-      <script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
-
-    </div>
-  </section>
+  <h1></h1>
+  <p>
+    I get excited about many things. Here are some collections.
+  </p>
+  <p>
+    <a href="question.html">Questions</a>, <a href="puzzle.html">Puzzles</a>
+  </p>
 </main>
 
 </body>
