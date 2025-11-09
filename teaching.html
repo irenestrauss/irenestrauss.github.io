@@ -51,6 +51,20 @@
       text-decoration:underline;
       text-underline-offset:3px;
     }
+    @media (max-width: 700px) {
+  .nav-links {
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+    padding-bottom: 0.3rem;
+    scrollbar-width: none;  /* hide scrollbar (Firefox) */
+  }
+  .nav-links::-webkit-scrollbar { display: none; } /* hide scrollbar (Chrome) */
+  .nav-links a {
+    flex: 0 0 auto; /* prevent shrinking */
+  }
+}
+
 
     /* Content */
     .container{ max-width:700px; margin:0 auto; text-align:left; }
