@@ -145,11 +145,16 @@
       transform-origin: top center;
       width: 100%;
     }
+@media (max-width: 750px) {
+  /* make the LessWrong box slightly narrower on mobile */
+  .lw-card {
+    width: 90%;         /* narrower than full width */
+    margin: 0 auto;     /* center it horizontally */
+  }
 
-    @media (max-width: 750px) {
-  .lw-card,
+  /* keep Substack box full width */
   .substack-shell {
-    width: 100%;        /* full width on mobile */
+    width: 100%;
   }
 
   .card-grid {
