@@ -133,7 +133,6 @@
 
 /* Violet CTA button */
 .lw-cta {
-  display:inline-block;
   align-self:center;          /* ← centers the box */
   padding:0.45rem 0.7rem;
   border-radius:0.55rem;
@@ -144,6 +143,8 @@
   font-weight:600;
   border:1px solid var(--brand);
   transition:background 0.15s ease, transform 0.05s ease;
+  display: block;
+  width: max-content;
   margin: 0.6rem auto 0;  
 }
 .lw-cta:hover { background:var(--brand-hover); transform:translateY(-1px); }
