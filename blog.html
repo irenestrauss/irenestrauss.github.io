@@ -129,6 +129,24 @@
       margin: 0;
     }
 
+
+
+/* Violet CTA button */
+.lw-cta {
+  display:inline-block;
+  align-self:center;          /* ← centers the box */
+  padding:0.45rem 0.7rem;
+  border-radius:0.55rem;
+  background:var(--brand);
+  color:white;
+  text-decoration:none;
+  font-size:0.85rem;
+  font-weight:600;
+  border:1px solid var(--brand);
+  transition:background 0.15s ease, transform 0.05s ease;
+}
+.lw-cta:hover { background:var(--brand-hover); transform:translateY(-1px); }
+
     /* Substack: no extra box around it; just a shell for scaling */
     .substack-shell {
       width: 90%;
@@ -161,6 +179,45 @@
     gap: 1rem;          /* a bit more vertical space between them */
   }
 }
+@media (min-width: 751px) {
+  /* Make LW card narrower and centered */
+  .lw-card {
+    width: 85%;           /* previously 90%; a bit less wide */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Slightly smaller text inside LW card */
+  .lw-card .source {
+    font-size: 0.65rem;
+  }
+  .lw-card h3 {
+    font-size: 0.9rem;
+  }
+  .lw-card .desc {
+    font-size: 0.75rem;
+  }
+}
+
+/* Desktop-only adjustments */
+@media (min-width: 751px) {
+  /* 1) Center the violet CTA button inside the LW card */
+  .lw-card .lw-cta {
+    display: block;            /* make it a block so margins work */
+    width: max-content;        /* shrink to the button's content width */
+    margin: 0.6rem auto 0;     /* center horizontally, add a little top space */
+  }
+
+  /* 2) Shift the LW box down a bit so it aligns with the Substack box */
+  .lw-card {
+    margin-top: 0.5rem;        /* adjust this value to taste */
+  }
+
+  /* 3) Move the two boxes a bit closer together */
+  .card-grid {
+    gap: 0.75rem;              /* smaller gap on desktop only */
+  }
+}
   </style>
 </head>
 <body>
@@ -185,12 +242,14 @@
 
       <!-- LessWrong (left) -->
       <div class="lw-card">
-        <img src="dem.webp" alt="Testing the Authoritarian Bias of LLMs thumbnail">
-        <p class="source">LessWrong</p>
-        <h3><a href="https://www.lesswrong.com/posts/s6JntqWQrNj5Gygzx/testing-the-authoritarian-bias-of-llms" target="_blank" rel="noopener">Testing the Authoritarian Bias of LLMs</a></h3>
-        <p class="desc">Models widely viewed as well-aligned (e.g., Claude) display measurable authoritarian leanings. When asked for role models, up to 50% of political figures mentioned are authoritarian—including controversial dictators like Muammar Gaddafi (Libya) or Nicolae Ceaușescu (Romania).</p>
-      </div>
-
+<img src="dem.webp" alt="Testing the Authoritarian Bias of LLMs thumbnail">
+<p class="source">LessWrong</p>
+<h3><a href="https://www.lesswrong.com/posts/s6JntqWQrNj5Gygzx/testing-the-authoritarian-bias-of-llms" target="_blank" rel="noopener">Testing the Authoritarian Bias of LLMs</a></h3>
+<p class="desc">Models widely viewed as well-aligned (e.g., Claude) display measurable authoritarian leanings. When asked for role models, up to 50% of political figures mentioned are authoritarian—including controversial dictators like Muammar Gaddafi (Libya) or Nicolae Ceaușescu (Romania).</p>
+<br>
+<a class="lw-cta" href="https://www.lesswrong.com/posts/s6JntqWQrNj5Gygzx/testing-the-authoritarian-bias-of-llms" target="_blank" rel="noopener">Read on LessWrong</a>
+<br>
+</div>
       <!-- Substack (right) — NO extra box, just scaled down -->
       <div class="substack-shell">
         <div class="substack-post-embed">
